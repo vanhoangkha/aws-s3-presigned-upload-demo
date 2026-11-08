@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to DMS! This document provides guidelines and information for contributors.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ Thank you for your interest in contributing to DMS! This document provides guide
    make dev-web    # Start web server
    ```
 
-## 📋 Development Guidelines
+## Development Guidelines
 
 ### Code Style
 
@@ -91,7 +91,7 @@ test(api): add unit tests for RBAC middleware
 - `docs/description` - Documentation updates
 - `refactor/description` - Code refactoring
 
-## 🧪 Testing
+## Testing
 
 ### Running Tests
 
@@ -132,7 +132,7 @@ describe('Feature Name', () => {
 });
 ```
 
-## 🏗️ Architecture Guidelines
+## Architecture Guidelines
 
 ### Backend (API)
 
@@ -157,7 +157,7 @@ describe('Feature Name', () => {
 - **Security**: Least-privilege IAM policies
 - **Monitoring**: CloudWatch logs and metrics
 
-## 🔒 Security Guidelines
+## Security Guidelines
 
 ### Code Security
 
@@ -174,7 +174,7 @@ describe('Feature Name', () => {
 - **TLS**: HTTPS only for all communications
 - **VPC**: Network isolation where appropriate
 
-## 📝 Documentation
+## Documentation
 
 ### Code Documentation
 
@@ -202,7 +202,7 @@ export async function createDocument(
 }
 ```
 
-## 🚀 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting
 
@@ -242,7 +242,7 @@ Brief description of changes
 - [ ] No new warnings introduced
 ```
 
-## 🐛 Bug Reports
+## Bug Reports
 
 ### Before Reporting
 
@@ -275,7 +275,7 @@ If applicable, add screenshots
 - AWS Region: [e.g. us-east-1]
 ```
 
-## 💡 Feature Requests
+## Feature Requests
 
 ### Feature Request Template
 
@@ -296,24 +296,24 @@ Other solutions you've considered
 Any other context or screenshots
 ```
 
-## 📞 Getting Help
+## Getting Help
 
 - **GitHub Issues**: For bugs and feature requests
 - **GitHub Discussions**: For questions and general discussion
 - **Documentation**: Check the [docs/](./docs/) directory
 - **Examples**: See example implementations in the codebase
 
-## 🏆 Recognition
+## Recognition
 
 Contributors will be recognized in:
 - **README**: Contributors section
 - **Release Notes**: Major contributions highlighted
 - **GitHub**: Contributor badges and stats
 
-## 📄 License
+## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
-Thank you for contributing to DMS! 🚀
+Thank you for contributing to DMS!

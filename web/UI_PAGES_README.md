@@ -1,12 +1,12 @@
-# 🎨 UI Pages for Real API Endpoints
+# UI Pages for Real API Endpoints
 
 This document describes all the UI pages created to interact with the real API endpoints from the Document Management System.
 
-## 📋 Overview
+## Overview
 
 All pages are built using **Ant Design** components for a modern, consistent UI experience. Each page directly corresponds to the real API endpoints documented in the main README.
 
-## 🚀 New Pages Created
+## New Pages Created
 
 ### 1. **DocumentManagementPage** (`/document-management`)
 **Purpose**: Complete document lifecycle management
@@ -19,12 +19,12 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - `POST /files/{id}/restore` - Restore deleted document
 
 **Features**:
-- ✅ Document table with sorting and filtering
-- ✅ Upload new documents with drag-and-drop
-- ✅ Edit document metadata (name, tags)
-- ✅ Delete/restore documents
-- ✅ Real-time status indicators
-- ✅ File size and type display
+- Document table with sorting and filtering
+- Upload new documents with drag-and-drop
+- Edit document metadata (name, tags)
+- Delete/restore documents
+- Real-time status indicators
+- File size and type display
 
 ### 2. **FileOperationsPage** (`/file-operations`)
 **Purpose**: File upload/download operations with progress tracking
@@ -34,11 +34,11 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - `GET /files/{id}/versions` - Get document versions
 
 **Features**:
-- ✅ Presigned URL upload with progress bar
-- ✅ Secure download with presigned URLs
-- ✅ Document version history viewer
-- ✅ Upload progress tracking
-- ✅ File type validation
+- Presigned URL upload with progress bar
+- Secure download with presigned URLs
+- Document version history viewer
+- Upload progress tracking
+- File type validation
 
 ### 3. **AdminManagementPage** (`/admin-management`)
 **Purpose**: Complete admin operations (Admin role only)
@@ -50,11 +50,11 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - `GET /admin/audits` - Get audit logs
 
 **Features**:
-- ✅ User management with role assignment
-- ✅ Create new users with validation
-- ✅ Force user signout capability
-- ✅ Audit log viewer with filtering
-- ✅ Tabbed interface for different admin functions
+- User management with role assignment
+- Create new users with validation
+- Force user signout capability
+- Audit log viewer with filtering
+- Tabbed interface for different admin functions
 
 ### 4. **UserProfileManagementPage** (`/user-profile-management`)
 **Purpose**: User profile and authentication details
@@ -62,11 +62,11 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - `GET /me` - Get current user profile
 
 **Features**:
-- ✅ Display user profile information
-- ✅ Show user roles and permissions
-- ✅ Vendor context information
-- ✅ Access level indicators
-- ✅ Profile refresh capability
+- Display user profile information
+- Show user roles and permissions
+- Vendor context information
+- Access level indicators
+- Profile refresh capability
 
 ### 5. **VendorOperationsPage** (`/vendor-operations`)
 **Purpose**: Vendor-specific operations and analytics (Vendor role)
@@ -75,11 +75,11 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - `GET /admin/users` - Get vendor users (filtered by backend)
 
 **Features**:
-- ✅ Vendor-specific document listing
-- ✅ Vendor user management
-- ✅ Analytics dashboard with statistics
-- ✅ Document status tracking
-- ✅ User activity overview
+- Vendor-specific document listing
+- Vendor user management
+- Analytics dashboard with statistics
+- Document status tracking
+- User activity overview
 
 ### 6. **ApiTestingPage** (`/api-testing`)
 **Purpose**: Interactive API endpoint testing console
@@ -90,14 +90,14 @@ All pages are built using **Ant Design** components for a modern, consistent UI 
 - Admin: `GET/POST /admin/users`, `POST /admin/users/{id}/roles`, `POST /admin/users/{id}/signout`, `GET /admin/audits`
 
 **Features**:
-- ✅ Interactive testing of all API endpoints
-- ✅ Tabbed interface by endpoint category
-- ✅ Real-time response display
-- ✅ Error handling and display
-- ✅ Input forms for parameterized endpoints
-- ✅ JSON response formatting
+- Interactive testing of all API endpoints
+- Tabbed interface by endpoint category
+- Real-time response display
+- Error handling and display
+- Input forms for parameterized endpoints
+- JSON response formatting
 
-## 🏗️ Architecture
+## Architecture
 
 ### Navigation Structure
 ```
@@ -137,7 +137,7 @@ src/
     └── apiService.ts            # Enhanced API service
 ```
 
-## 🔧 Technical Implementation
+## Technical Implementation
 
 ### API Integration
 - **Axios-based HTTP client** with interceptors
@@ -159,7 +159,7 @@ src/
 - **Error boundaries** for graceful error handling
 - **Loading indicators** for better UX
 
-## 🚀 Usage Instructions
+## Usage Instructions
 
 ### 1. Start the Application
 ```bash
@@ -184,7 +184,7 @@ npm start
 - **Vendor**: Access to Vendor Operations and general features
 - **User**: Access to user-specific features
 
-## 🔐 Security Features
+## Security Features
 
 ### Authentication
 - **JWT token validation** on all requests
@@ -198,27 +198,27 @@ npm start
 - **CSRF protection** via JWT tokens
 - **Secure file upload** with presigned URLs
 
-## 📊 API Endpoint Coverage
+## API Endpoint Coverage
 
 | Category | Endpoint | Method | Page | Status |
 |----------|----------|--------|------|--------|
-| Auth | `/me` | GET | UserProfileManagementPage | ✅ |
-| Documents | `/files` | GET | DocumentManagementPage | ✅ |
-| Documents | `/files` | POST | DocumentManagementPage | ✅ |
-| Documents | `/files/{id}` | GET | DocumentManagementPage | ✅ |
-| Documents | `/files/{id}` | PATCH | DocumentManagementPage | ✅ |
-| Documents | `/files/{id}` | DELETE | DocumentManagementPage | ✅ |
-| Documents | `/files/{id}/restore` | POST | DocumentManagementPage | ✅ |
-| Files | `/files/presign/upload` | POST | FileOperationsPage | ✅ |
-| Files | `/files/presign/download` | POST | FileOperationsPage | ✅ |
-| Files | `/files/{id}/versions` | GET | FileOperationsPage | ✅ |
-| Admin | `/admin/users` | GET | AdminManagementPage | ✅ |
-| Admin | `/admin/users` | POST | AdminManagementPage | ✅ |
-| Admin | `/admin/users/{id}/roles` | POST | AdminManagementPage | ✅ |
-| Admin | `/admin/users/{id}/signout` | POST | AdminManagementPage | ✅ |
-| Admin | `/admin/audits` | GET | AdminManagementPage | ✅ |
+| Auth | `/me` | GET | UserProfileManagementPage | Yes |
+| Documents | `/files` | GET | DocumentManagementPage | Yes |
+| Documents | `/files` | POST | DocumentManagementPage | Yes |
+| Documents | `/files/{id}` | GET | DocumentManagementPage | Yes |
+| Documents | `/files/{id}` | PATCH | DocumentManagementPage | Yes |
+| Documents | `/files/{id}` | DELETE | DocumentManagementPage | Yes |
+| Documents | `/files/{id}/restore` | POST | DocumentManagementPage | Yes |
+| Files | `/files/presign/upload` | POST | FileOperationsPage | Yes |
+| Files | `/files/presign/download` | POST | FileOperationsPage | Yes |
+| Files | `/files/{id}/versions` | GET | FileOperationsPage | Yes |
+| Admin | `/admin/users` | GET | AdminManagementPage | Yes |
+| Admin | `/admin/users` | POST | AdminManagementPage | Yes |
+| Admin | `/admin/users/{id}/roles` | POST | AdminManagementPage | Yes |
+| Admin | `/admin/users/{id}/signout` | POST | AdminManagementPage | Yes |
+| Admin | `/admin/audits` | GET | AdminManagementPage | Yes |
 
-## 🎯 Next Steps
+## Next Steps
 
 ### Enhancements
 1. **Real-time updates** with WebSocket integration
@@ -239,7 +239,7 @@ npm start
 3. **Environment configuration** management
 4. **Monitoring and analytics** setup
 
-## 🤝 Contributing
+## Contributing
 
 When adding new pages:
 1. Follow the existing pattern in `pages/` directory
@@ -251,4 +251,4 @@ When adding new pages:
 
 ---
 
-**All pages are now fully integrated with the real API endpoints and ready for production use!** 🚀
+**All pages are now fully integrated with the real API endpoints and ready for production use!**

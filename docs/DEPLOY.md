@@ -1,4 +1,4 @@
-# 🚀 AWS Deployment Guide - Document Management System
+# AWS Deployment Guide - Document Management System
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@
 - Docker
 - Make
 
-## 🔧 Initial Setup
+## Initial Setup
 
 ### 1. Configure AWS Credentials
 ```bash
@@ -21,7 +21,7 @@ aws configure
 make setup
 ```
 
-## 🏗️ Infrastructure Deployment
+## Infrastructure Deployment
 
 ### 1. Initialize Terraform
 ```bash
@@ -51,7 +51,7 @@ This deploys:
 - **ECR repositories**
 - **KMS keys** for encryption
 
-## 🚀 API Deployment
+## API Deployment
 
 ### 1. Build and Push Container
 ```bash
@@ -86,7 +86,7 @@ aws lambda update-function-code --function-name dms-dev-adminAudits --image-uri 
 aws lambda update-function-code --function-name dms-dev-getMe --image-uri $(aws sts get-caller-identity --query Account --output text).dkr.ecr.us-east-1.amazonaws.com/dms-dev-api:latest
 ```
 
-## 🌐 Frontend Deployment
+## Frontend Deployment
 
 ### 1. Get Infrastructure Outputs
 ```bash
@@ -107,7 +107,7 @@ aws s3 sync dist/ s3://dms-dev-web --delete
 aws cloudfront create-invalidation --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[?Comment=='dms-dev-web'].Id" --output text) --paths "/*"
 ```
 
-## 🔐 Post-Deployment Configuration
+## Post-Deployment Configuration
 
 ### 1. Create Admin User
 ```bash
@@ -135,7 +135,7 @@ cd infra/envs/dev
 terraform output cloudfront_domain
 ```
 
-## 🧪 Testing Deployment
+## Testing Deployment
 
 ### 1. Health Check
 ```bash
@@ -154,7 +154,7 @@ curl https://$CLOUDFRONT_URL
 3. Use admin credentials created above
 4. Verify RBAC functionality
 
-## 📊 Monitoring & Logs
+## Monitoring & Logs
 
 ### View Logs
 ```bash
@@ -172,7 +172,7 @@ aws logs tail /aws/cloudtrail/dms-dev-trail --follow
 - Navigate to CloudWatch Console
 - View custom dashboards for API, Lambda, and DynamoDB metrics
 
-## 🔄 Updates & Maintenance
+## Updates & Maintenance
 
 ### Update Infrastructure
 ```bash
@@ -195,7 +195,7 @@ aws s3 sync dist/ s3://dms-dev-web --delete
 # Invalidate CloudFront cache (step above)
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -229,17 +229,17 @@ curl -X POST $API_URL/files/presign/upload \
   -d '{"filename":"test.pdf","contentType":"application/pdf"}'
 ```
 
-## 🔒 Security Features Enabled
+## Security Features Enabled
 
-- ✅ **KMS Encryption**: All data encrypted at rest
-- ✅ **WAF Protection**: CloudFront with managed rules
-- ✅ **CloudTrail**: Complete audit logging
-- ✅ **IAM Least Privilege**: Minimal required permissions
-- ✅ **VPC Security**: Private subnets for Lambda
-- ✅ **TLS 1.2+**: HTTPS only communication
-- ✅ **DDoS Protection**: CloudFront Shield Standard
+- **KMS Encryption**: All data encrypted at rest
+- **WAF Protection**: CloudFront with managed rules
+- **CloudTrail**: Complete audit logging
+- **IAM Least Privilege**: Minimal required permissions
+- **VPC Security**: Private subnets for Lambda
+- **TLS 1.2+**: HTTPS only communication
+- **DDoS Protection**: CloudFront Shield Standard
 
-## 📈 Production Deployment
+## Production Deployment
 
 For production deployment:
 
@@ -256,4 +256,4 @@ make infra-apply ENV=prod
 ```
 
 ---
-**🎯 Your DMS is now deployed and running on AWS with enterprise-grade security!**
+**Your DMS is now deployed and running on AWS with enterprise-grade security!**

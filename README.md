@@ -1,4 +1,4 @@
-# 🚀 Document Management System (DMS)
+# Document Management System (DMS)
 
 Production-ready serverless document management system with role-based access control, built on AWS.
 
@@ -8,21 +8,21 @@ Production-ready serverless document management system with role-based access co
 [![React](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://reactjs.org/)
 [![Terraform](https://img.shields.io/badge/Terraform-1.6+-623CE4.svg)](https://www.terraform.io/)
 
-## 🌟 Overview
+## Overview
 
 A comprehensive document management solution featuring secure file storage, role-based access control, and real-time audit logging. Built with modern serverless architecture on AWS for scalability and cost-effectiveness.
 
-### ✨ Key Features
+### Key Features
 
-- 🔐 **Role-Based Access Control** - Admin, Vendor, and User roles with granular permissions
-- 📁 **Secure Document Storage** - S3 with KMS encryption and versioning
-- 🔍 **Real-time Audit Logging** - Complete activity tracking with analytics
-- 🚀 **Serverless Architecture** - Auto-scaling Lambda functions with container deployment
-- 🎨 **Modern UI** - React with AWS Cloudscape Design System
-- 🏗️ **Infrastructure as Code** - 100% Terraform with multi-environment support
-- 📊 **Monitoring & Analytics** - CloudWatch dashboards and Athena queries
+- **Role-Based Access Control** - Admin, Vendor, and User roles with granular permissions
+- **Secure Document Storage** - S3 with KMS encryption and versioning
+- **Real-time Audit Logging** - Complete activity tracking with analytics
+- **Serverless Architecture** - Auto-scaling Lambda functions with container deployment
+- **Modern UI** - React with AWS Cloudscape Design System
+- **Infrastructure as Code** - 100% Terraform with multi-environment support
+- **Monitoring & Analytics** - CloudWatch dashboards and Athena queries
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -64,7 +64,7 @@ A comprehensive document management solution featuring secure file storage, role
 └────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -98,22 +98,22 @@ After deployment, get the CloudFront URL:
 make status ENV=dev
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 document-management-system/
-├── 📋 Root Configuration
+├── Root Configuration
 │   ├── package.json              # Workspace configuration
 │   ├── Makefile                  # Build automation
 │   ├── .env.example             # Environment template
 │   └── docker-compose.yml       # Local development
 │
-├── 🚀 scripts/                  # Automation Scripts
+├── scripts/ # Automation Scripts
 │   ├── deploy.sh               # Main deployment
 │   ├── setup-env.sh           # Environment setup
 │   └── cleanup.sh             # Resource cleanup
 │
-├── 🏗️ infra/                   # Infrastructure as Code
+├── infra/ # Infrastructure as Code
 │   ├── modules/                # Terraform modules
 │   │   ├── apigateway/        # API Gateway configuration
 │   │   ├── cognito/           # Authentication
@@ -125,7 +125,7 @@ document-management-system/
 │       ├── stg/              # Staging
 │       └── prod/             # Production
 │
-├── 🚀 api/                     # Backend Services
+├── api/ # Backend Services
 │   ├── src/
 │   │   ├── handlers/         # Lambda functions
 │   │   ├── lib/             # Shared utilities
@@ -133,7 +133,7 @@ document-management-system/
 │   ├── Dockerfile           # Container image
 │   └── package.json         # Dependencies
 │
-├── 🎨 web/                     # Frontend Application
+├── web/ # Frontend Application
 │   ├── src/
 │   │   ├── components/      # UI components
 │   │   ├── pages/          # Application pages
@@ -141,14 +141,14 @@ document-management-system/
 │   │   └── services/       # API clients
 │   └── package.json        # Dependencies
 │
-└── 📖 docs/                    # Documentation
+└── docs/ # Documentation
     ├── api/                  # API specifications
     ├── architecture/         # System design
     ├── deployment/          # Deployment guides
     └── security/           # Security documentation
 ```
 
-## 🔧 Development
+## Development
 
 ### Local Development
 
@@ -187,7 +187,7 @@ make deploy ENV=staging
 make status ENV=staging
 ```
 
-## 🔐 Security & Compliance
+## Security & Compliance
 
 ### Authentication & Authorization
 - **Cognito User Pool** with hosted UI
@@ -207,7 +207,7 @@ make status ENV=staging
 - **Automated alerting** for security events
 - **Compliance reporting** via Athena
 
-## 🎯 User Roles
+## User Roles
 
 | Role | Permissions | Use Cases |
 |------|-------------|-----------|
@@ -215,7 +215,7 @@ make status ENV=staging
 | **Vendor** | Vendor documents, vendor users, analytics | Business partners, suppliers |
 | **User** | Own documents only, profile management | End users, employees |
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### Document Management
 ```
@@ -242,7 +242,7 @@ POST   /admin/users/{id}/roles # Update roles
 GET    /admin/audits          # Audit logs
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Environment Configuration
 
@@ -286,7 +286,7 @@ terraform apply -target=module.previous_version
 # Update image tags in Lambda console
 ```
 
-## 📈 Monitoring
+## Monitoring
 
 ### CloudWatch Dashboards
 - **System Overview** - Key metrics and health
@@ -311,7 +311,7 @@ WHERE action = 'document.create'
 AND timestamp > current_timestamp - interval '1' day
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -354,7 +354,7 @@ aws cloudformation describe-stacks --stack-name dms-prod
 curl -H "Authorization: Bearer $TOKEN" https://api.example.com/files
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -369,17 +369,17 @@ curl -H "Authorization: Bearer $TOKEN" https://api.example.com/files
 - Use **conventional commits**
 - Ensure **security** compliance
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
 - **Documentation**: [docs/](docs/)
 - **Issues**: [GitHub Issues](https://github.com/your-org/document-management-system/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-org/document-management-system/discussions)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **AWS** for serverless infrastructure
 - **Cloudscape Design System** for UI components
@@ -388,6 +388,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ using AWS serverless technologies**
+**Built with using AWS serverless technologies**
 
 *For detailed documentation, see the [docs/](docs/) directory.*
