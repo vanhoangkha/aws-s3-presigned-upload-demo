@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🔑 How to get JWT tokens for testing:"
+echo "How to get JWT tokens for testing:"
 echo ""
 echo "1. Start the web app:"
 echo "   cd web && npm start"
@@ -26,7 +26,7 @@ echo ""
 
 # Check if web app is running
 if curl -s http://localhost:3000 > /dev/null 2>&1; then
-    echo "✅ Web app is running at http://localhost:3000"
+    echo "Web app is running at http://localhost:3000"
 else
-    echo "❌ Web app is not running. Start it with: cd web && npm start"
+    echo "Web app is not running. Start it with: cd web && npm start"
 fi

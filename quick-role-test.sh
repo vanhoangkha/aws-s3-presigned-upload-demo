@@ -1,19 +1,19 @@
 #!/bin/bash
 
-echo "🎭 Quick Role Testing Setup"
+echo "Quick Role Testing Setup"
 echo "=========================="
 
 # Check if web app is running
 if curl -s http://localhost:3000 > /dev/null; then
-    echo "✅ Web app is running on http://localhost:3000"
+    echo "Web app is running on http://localhost:3000"
 else
-    echo "❌ Web app not running. Starting..."
+    echo "Web app not running. Starting..."
     cd web && npm start &
     sleep 10
 fi
 
 echo ""
-echo "🔐 Role Testing Instructions:"
+echo "Role Testing Instructions:"
 echo ""
 echo "1️⃣ ADMIN ROLE TEST:"
 echo "   • Open: http://localhost:3000"
@@ -48,7 +48,7 @@ echo "   • Test User Documents page"
 echo "   • Verify no Admin/Vendor sections"
 echo ""
 
-echo "🧪 Test Checklist:"
+echo "Test Checklist:"
 echo "□ Navigation adapts to user role"
 echo "□ Pages show appropriate content"
 echo "□ API calls work for each role"
@@ -56,4 +56,4 @@ echo "□ Access control prevents unauthorized access"
 echo "□ Error handling for forbidden actions"
 echo ""
 
-echo "🚀 Start testing at: http://localhost:3000"
+echo "Start testing at: http://localhost:3000"

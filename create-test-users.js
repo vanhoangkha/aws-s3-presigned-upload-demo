@@ -58,31 +58,31 @@ async function createTestUser(user) {
       Permanent: true
     }).promise();
     
-    console.log(`✅ Created user: ${user.username}`);
+    console.log(`Created user: ${user.username}`);
     return true;
   } catch (error) {
     if (error.code === 'UsernameExistsException') {
-      console.log(`⚠️  User already exists: ${user.username}`);
+      console.log(`User already exists: ${user.username}`);
       return true;
     }
-    console.error(`❌ Failed to create user ${user.username}:`, error.message);
+    console.error(`Failed to create user ${user.username}:`, error.message);
     return false;
   }
 }
 
 async function main() {
-  console.log('🎭 Creating Test Users for 3 Roles\n');
+  console.log('Creating Test Users for 3 Roles\n');
   
   for (const user of testUsers) {
     await createTestUser(user);
   }
   
-  console.log('\n📋 Test Users Created:');
-  console.log('👤 Admin: admin-test / TempPass123!');
-  console.log('👤 Vendor: vendor-test / TempPass123!'); 
-  console.log('👤 User: user-test / TempPass123!');
+  console.log('\nTest Users Created:');
+  console.log('Admin: admin-test / TempPass123!');
+  console.log('Vendor: vendor-test / TempPass123!'); 
+  console.log('User: user-test / TempPass123!');
   
-  console.log('\n🚀 Ready to test at: http://localhost:3000');
+  console.log('\nReady to test at: http://localhost:3000');
 }
 
 if (require.main === module) {
