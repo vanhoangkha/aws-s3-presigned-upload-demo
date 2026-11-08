@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-console.log('🔍 Checking for Missing API Endpoints\n');
+console.log('Checking for Missing API Endpoints\n');
 
 // All endpoints from handlers and test script
 const allEndpoints = [
@@ -38,7 +38,7 @@ const allEndpoints = [
   { method: 'PATCH', path: '/user/profile', description: 'Update user profile', page: 'EnhancedProfilePage' }
 ];
 
-console.log('📊 Complete API Endpoint Coverage:\n');
+console.log('Complete API Endpoint Coverage:\n');
 
 const groupedEndpoints = allEndpoints.reduce((acc, endpoint) => {
   const category = endpoint.path.split('/')[1];
@@ -48,25 +48,25 @@ const groupedEndpoints = allEndpoints.reduce((acc, endpoint) => {
 }, {});
 
 Object.keys(groupedEndpoints).forEach(category => {
-  console.log(`🔹 ${category.toUpperCase()} Endpoints:`);
+  console.log(`${category.toUpperCase()} Endpoints:`);
   groupedEndpoints[category].forEach(endpoint => {
-    console.log(`  ✅ ${endpoint.method} ${endpoint.path} - ${endpoint.description}`);
-    console.log(`     📄 Implemented in: ${endpoint.page}`);
+    console.log(`  ${endpoint.method} ${endpoint.path} - ${endpoint.description}`);
+    console.log(`     Implemented in: ${endpoint.page}`);
   });
   console.log('');
 });
 
-console.log('📈 Summary:');
-console.log(`✅ Total Endpoints Covered: ${allEndpoints.length}`);
-console.log('✅ All real API endpoints from handlers are now implemented in UI');
-console.log('✅ Added missing vendor-specific endpoints');
-console.log('✅ Added missing user-specific endpoints');
-console.log('✅ Enhanced API testing page with all endpoints');
+console.log('Summary:');
+console.log(`Total Endpoints Covered: ${allEndpoints.length}`);
+console.log('All real API endpoints from handlers are now implemented in UI');
+console.log('Added missing vendor-specific endpoints');
+console.log('Added missing user-specific endpoints');
+console.log('Enhanced API testing page with all endpoints');
 
-console.log('\n🎯 New Pages Added for Missing Endpoints:');
-console.log('✅ UserDocumentsPage - GET /user/documents');
-console.log('✅ EnhancedProfilePage - GET/PATCH /user/profile');
-console.log('✅ Updated VendorOperationsPage - GET /vendor/* endpoints');
-console.log('✅ Updated ApiTestingPage - All vendor and user endpoints');
+console.log('\nNew Pages Added for Missing Endpoints:');
+console.log('UserDocumentsPage - GET /user/documents');
+console.log('EnhancedProfilePage - GET/PATCH /user/profile');
+console.log('Updated VendorOperationsPage - GET /vendor/* endpoints');
+console.log('Updated ApiTestingPage - All vendor and user endpoints');
 
-console.log('\n🏁 No more missing endpoints! All API endpoints are now covered in the UI.');
+console.log('\nNo more missing endpoints! All API endpoints are now covered in the UI.');

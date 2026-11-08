@@ -2,7 +2,7 @@
 
 API_URL="https://wcyez0q6t8.execute-api.us-east-1.amazonaws.com/v1"
 
-echo "🔍 Testing API Structure (without authentication)"
+echo "Testing API Structure (without authentication)"
 echo "API URL: $API_URL"
 echo ""
 
@@ -32,14 +32,14 @@ for endpoint in "${endpoints[@]}"; do
     body=$(echo "$response" | sed '$d')
     
     if [ "$http_code" = "401" ]; then
-        echo "✅ Correctly protected ($http_code)"
+        echo "Correctly protected ($http_code)"
     else
-        echo "❌ Unexpected response ($http_code): $body"
+        echo "Unexpected response ($http_code): $body"
     fi
     echo ""
 done
 
-echo "📋 Available Endpoints Summary:"
+echo "Available Endpoints Summary:"
 echo ""
 echo "Authentication & User Info:"
 echo "  GET /me - Get current user info"

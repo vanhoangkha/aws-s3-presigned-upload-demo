@@ -47,9 +47,9 @@ test_endpoint() {
     if [[ $http_code -ge 200 && $http_code -lt 300 ]]; then
         echo -e "${GREEN}✓ SUCCESS ($http_code)${NC}"
     elif [[ $http_code -eq 401 ]]; then
-        echo -e "${YELLOW}⚠ UNAUTHORIZED ($http_code) - Check token${NC}"
+        echo -e "${YELLOW}UNAUTHORIZED ($http_code) - Check token${NC}"
     elif [[ $http_code -eq 403 ]]; then
-        echo -e "${YELLOW}⚠ FORBIDDEN ($http_code) - Check permissions${NC}"
+        echo -e "${YELLOW}FORBIDDEN ($http_code) - Check permissions${NC}"
     else
         echo -e "${RED}✗ FAILED ($http_code)${NC}"
     fi
@@ -58,13 +58,13 @@ test_endpoint() {
     echo ""
 }
 
-echo -e "${BLUE}🚀 Testing All API Endpoints${NC}"
+echo -e "${BLUE}Testing All API Endpoints${NC}"
 echo "API URL: $API_URL"
 echo ""
 
 # Check if tokens are set
 if [ "$ADMIN_TOKEN" = "YOUR_ADMIN_JWT_TOKEN_HERE" ]; then
-    echo -e "${RED}❌ Please update tokens in the script first!${NC}"
+    echo -e "${RED}Please update tokens in the script first!${NC}"
     echo "1. Login to web app at http://localhost:3000"
     echo "2. Get JWT tokens from browser localStorage"
     echo "3. Update ADMIN_TOKEN, VENDOR_TOKEN, USER_TOKEN in this script"
@@ -125,4 +125,4 @@ echo -e "${YELLOW}--- Invalid Endpoints ---${NC}"
 test_endpoint "GET" "/nonexistent" "$ADMIN_TOKEN" "" "Non-existent Endpoint"
 test_endpoint "POST" "/files/invalid/action" "$ADMIN_TOKEN" "" "Invalid Action"
 
-echo -e "${GREEN}🏁 Testing Complete!${NC}"
+echo -e "${GREEN}Testing Complete!${NC}"
